@@ -75,7 +75,7 @@ class AbstractApplication(models.Model):
         max_length=32, choices=GRANT_TYPES
     )
     client_secret = models.CharField(
-        max_length=255, blank=True, default=generate_client_secret, db_index=True
+        max_length=256, blank=True, default=generate_client_secret, db_index=True
     )
     name = models.CharField(max_length=255, blank=True)
     skip_authorization = models.BooleanField(default=False)
